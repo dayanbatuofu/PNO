@@ -32,13 +32,13 @@ if choice == 0:
     data = scipy.io.loadmat(file)
     title = 'GT $\u03B8=($' + str(name[N_policy]) + '$)$'
 elif choice == 1:
-    file = 'closed_loop/tanh/closedloop_traj_hno_initial_' + str(policy[N_policy]) + '_tanh_NOP_5k.mat'
-    # file = 'closed_loop/tanh/closedloop_traj_hno_initial_' + str(policy[N_policy]) + '_tanh_NOP_nc_5k.mat'
+    file = 'closed_loop/HNO/closedloop_traj_hno_initial_' + str(policy[N_policy]) + '_tanh_NOP_5k.mat'
+    # file = 'closed_loop/HNO/closedloop_traj_hno_initial_' + str(policy[N_policy]) + '_tanh_NOP_nc_5k.mat'
     data = scipy.io.loadmat(file)
     title = 'Hybrid $\u03B8=($' + str(name[N_policy]) + '$)$'
 else:
-    file = 'closed_loop/tanh/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
-    # file = 'closed_loop/tanh/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
+    file = 'closed_loop/PNO/' + str(policy[N_policy]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
+    # file = 'closed_loop/PNO/' + str(policy[N_policy]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
     data = scipy.io.loadmat(file)
     title = 'Pontryagin $\u03B8=($' + str(name[N_policy]) + '$)$'
 
