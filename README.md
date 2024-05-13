@@ -31,4 +31,4 @@ The code is organized as follows:
 * `./utilities/BVP_solver.py`: BVP solver.
 * `./example/vehicle/problem_def_intersection.py`: dynamic, PMP equation setting for uncontrolled intersection case.
 
-run `generate_intersection.py`, to collect NE values. Please notice there is four player types in case 1. You should give setting in `generate_intersection.py`. Data size can be set in `./example/vehicle/problem_def_intersection.py`.
+run `generate_intersection.py`, to collect NE values. Please notice there is 25 player types for uncontrolled intersection case. You should give setting in `generate_intersection.py`. Data size can be set in `./example/vehicle/problem_def_intersection.py`.
