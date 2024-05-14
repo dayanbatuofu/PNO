@@ -93,18 +93,23 @@ def generate(data):
 
 model = ['hno', 'pno']
 activation = ['tanh', 'sine', 'relu']
-policy = ['1_1', '2_2', '3_3', '4_4', '5_5', '1_2', '1_3', '1_4', '1_5', '2_3', '2_4', '2_5', '3_4', '3_5', '4_5',
+# policy = ['1_1', '2_2', '3_3', '4_4', '5_5', '1_2', '1_3', '1_4', '1_5', '2_3', '2_4', '2_5', '3_4', '3_5', '4_5',
+#           '2_1', '3_1', '4_1', '5_1', '3_2', '4_2', '5_2', '4_3', '5_3', '5_4']
+
+policy = ['2_2', '3_3', '4_4', '5_5', '1_2', '1_3', '1_4', '1_5', '2_3', '2_4', '2_5', '3_4', '3_5', '4_5',
           '2_1', '3_1', '4_1', '5_1', '3_2', '4_2', '5_2', '4_3', '5_3', '5_4']
 
 for i in range(len(policy)):
 
-    N_model = 0
+    N_model = 1
     N_policy = i
-    N_activation = 0
+    N_activation = 2
 
     # path = './test_data/data_test_' + str(policy[N_policy]) + '_600.mat'
-    path = 'closed_loop/tanh/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '.mat'
-    # path = 'closed_loop/tanh/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc.mat'
+    path = 'closed_loop/HNO/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '.mat'
+    # path = 'closed_loop/HNO/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc.mat'
+    # path = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '.mat'
+    # path = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc.mat'
     data = scipy.io.loadmat(path)
 
     data.update({'t0': data['t']})
@@ -116,6 +121,8 @@ for i in range(len(policy)):
 
     new_data = generate(data)
     # save_path = './test_data/data_test_' + str(policy[N_policy]) + '_600_5k.mat'
-    save_path = 'closed_loop/tanh/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
-    # save_path = 'closed_loop/tanh/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
+    save_path = 'closed_loop/HNO/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
+    # save_path = 'closed_loop/HNO/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
+    # save_path = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
+    # save_path = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_' + str(model[N_model]) + '_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
     scipy.io.savemat(save_path, new_data)

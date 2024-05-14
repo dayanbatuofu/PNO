@@ -60,10 +60,11 @@ The code is organized as follows:
 * `./validation_scripts/closedloop_traj_generation_pno_sine.py`: use PNO (sine as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/closedloop_traj_generation_pno_sine_sym.py`: use PNO (sine as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/trajectory_with_value_nop.py`: visualize saftety performance for value network (tanh, relu and sin as activation function).
+* `./validation_scripts/data_interpolation_nop.py`: create finner state interval for the generated trajectories using neurla operator. Compute more accurate collisin rates.
 * `./validation_scripts/model`: experimental model in the paper.
 * `./validation_scripts/train_data`: training data in the paper.
 * `./validation_scripts/test_data`: testing data in the paper.
-* `./validation_scripts/closed_loop`: store data by using value network as closed-loop controllers, data used for paper is ready. Download the ground truth data before plotting: <a href="https://drive.google.com/drive/folders/1--zWTasWZLNe6PQz1gA2fr9dhDYJ6fsb?usp=sharing"> link.
+* `./validation_scripts/closed_loop`: store data by using value network as closed-loop controllers, data used for paper is ready. Download the generated trajectories: <a href="https://drive.google.com/drive/folders/1--zWTasWZLNe6PQz1gA2fr9dhDYJ6fsb?usp=sharing"> link.
 * `./example/vehicle/problem_def_intersection.py`: dynamic, PMP equation setting for uncontrolled intersection case.
 
 ## Contact

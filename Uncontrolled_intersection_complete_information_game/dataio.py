@@ -377,7 +377,7 @@ class IntersectionHJ_Pontryagin(Dataset):
 
         self.pretrain = pretrain
         self.numpoints = numpoints
-        self.numcostate = 1500  # 10, 1000
+        self.numcostate = 1000  
         self.num_states = 4
         self.num_vio = int(0.2 * self.numpoints)
         self.num_end = 200
