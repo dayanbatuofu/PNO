@@ -20,7 +20,7 @@ name = ['1, 1', '2, 2', '3, 3', '4, 4', '5, 5']
 # name = ['2, 1', '3, 1', '4, 1', '5, 1', '3, 2', '4, 2', '5, 2', '4, 3', '5, 3', '5, 4']
 
 N_policy = 1
-N_activation = 2
+N_activation = 0
 agent1 = True
 agent2 = False
 
@@ -37,8 +37,8 @@ elif choice == 1:
     data = scipy.io.loadmat(file)
     title = 'Hybrid $\u03B8=($' + str(name[N_policy]) + '$)$'
 else:
-    # file = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
-    file = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc.mat'
+    file = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_5k.mat'
+    # file = 'closed_loop/PNO/' + str(activation[N_activation]) + '/closedloop_traj_pno_initial_' + str(policy[N_policy]) + '_' + str(activation[N_activation]) + '_nc_5k.mat'
     data = scipy.io.loadmat(file)
     title = 'Pontryagin $\u03B8=($' + str(name[N_policy]) + '$)$'
 
