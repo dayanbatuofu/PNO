@@ -42,10 +42,21 @@ def value_action(X, t, model, alpha, param_fun):
     costate = model_output['model_out_cn']
     cut_index = x.shape[1] // 2
 
-    dvdx_1 = costate[:, :cut_index, :].squeeze(0)
-    dvdx_2 = costate[:, cut_index:, :].squeeze(0)
-    lam11_2 = dvdx_1[:, 1:2]   # lambda_11
-    lam22_2 = dvdx_2[:, -1:]   # lambda_22
+    jac, _ = diff_operators.jacobian(y, x)
+    dv_1 = jac[:, :cut_index, :]
+    dv_2 = jac[:, cut_index:, :]
+
+    # agent 1: partial gradient of V w.r.t. state
+    dvdx_1 = dv_1[..., 0, 1:].squeeze().reshape(1, dv_1.shape[-1] - 1)
+
+    # unnormalize the costate for agent 1
+    lam11_2 = dvdx_1[:, 1:2] / ((32 - 15) / 2)  # lambda_11
+
+    # agent 2: partial gradient of V w.r.t. state
+    dvdx_2 = dv_2[..., 0, 1:].squeeze().reshape(1, dv_2.shape[-1] - 1)
+
+    # unnormalize the costate for agent 2
+    lam22_2 = dvdx_2[:, 1:2] / ((32 - 15) / 2)  # lambda_22
 
     max_acc = torch.tensor([10.], dtype=torch.float32).to(device)
     min_acc = torch.tensor([-5.], dtype=torch.float32).to(device)
