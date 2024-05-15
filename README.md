@@ -62,6 +62,8 @@ The code is organized as follows:
 * `./validation_scripts/trajectory_with_value_nop.py`: visualize saftety performance for value network (tanh, relu and sin as activation function).
 * `./validation_scripts/data_interpolation_nop.py`: create finner state interval for the generated trajectories using neurla operator. Compute more accurate collision rates.
 * `./validation_scripts/plot_intersection.py`: visualize parameter function $a(\rm x, \theta)$ on the lattices.
+* `./validation_scripts/deeponet_value_contour.py`: visualize value contour of the six learning trunk net output.
+* `./validation_scripts/deeponet_branch_visualization.py`: visualize sorted sample mean and std of coefficients $|b_k|$ over $\Theta^2$.
 * `./validation_scripts/model`: experimental model in the paper.
 * `./validation_scripts/train_data`: training data in the paper.
 * `./validation_scripts/test_data`: testing data in the paper.
