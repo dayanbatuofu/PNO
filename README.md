@@ -27,11 +27,11 @@ conda activate hji
 There are two folders with different functions
 ### BVP_generation: use standard BVP solver to collect the Nash equilibrial (NE) values for uncontrolled intersection
 The code is organized as follows:
-* `generate_intersection.py`: generate 5D NE values functions under 25 player type configurations $\Theta^2$.
+* `generate_intersection.py`: generate 5D NE values functions under player type configurations $\Theta^2$.
 * `./utilities/BVP_solver.py`: BVP solver.
 * `./example/vehicle/problem_def_intersection.py`: dynamic, PMP equation setting for uncontrolled intersection case.
 
-run `generate_intersection.py`, to collect NE values. Please notice there is 25 player types for uncontrolled intersection case. You should give setting in `generate_intersection.py`. Data size can be set in `./example/vehicle/problem_def_intersection.py`.
+run `generate_intersection.py`, to collect NE values. Please notice there are player type configurations $\Theta^2$ for uncontrolled intersection case. You should give setting in `generate_intersection.py`. Data size can be set in `./example/vehicle/problem_def_intersection.py`.
 
 
 ### Uncontrolled_intersection_complete_information_game: train hybrid neural operator and Pontryagin neural operator to complete saftety performance test for uncontrolled intersection case with complete information
