@@ -27,7 +27,7 @@ conda activate hji
 There are two folders with different functions
 ### BVP_generation: use standard BVP solver to collect the Nash equilibrial (NE) values for uncontrolled intersection
 The code is organized as follows:
-* `generate_intersection.py`: generate 5D NE values functions under 25 player type configurations.
+* `generate_intersection.py`: generate 5D NE values functions under 25 player type configurations $\Theta^2$.
 * `./utilities/BVP_solver.py`: BVP solver.
 * `./example/vehicle/problem_def_intersection.py`: dynamic, PMP equation setting for uncontrolled intersection case.
 
