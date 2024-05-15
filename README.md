@@ -49,8 +49,8 @@ The code is organized as follows:
 * `modules_pno.py`: contains PNO architecture.
 * `utils.py`: contains utility functions.
 * `diff_operators.py`: contains implementations of differential operators.
-* `./experiment_scripts/train_intersection_HNO.py`: contains scripts to train the model for uncontrolled intersection case, which can reproduce experiments in the paper.
-* `./experiment_scripts/train_intersection_PNO.py`: contains scripts to train the model for uncontrolled intersection case, which can reproduce experiments in the paper.
+* `./experiment_scripts/train_intersection_HNO.py`: contains scripts to train the HNO model for uncontrolled intersection case, which can reproduce experiments in the paper.
+* `./experiment_scripts/train_intersection_PNO.py`: contains scripts to train the PNO model for uncontrolled intersection case, which can reproduce experiments in the paper.
 * `./validation_scripts/closedloop_traj_generation_hno_tanh.py`: use HNO (tanh as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/closedloop_traj_generation_hno_tanh_sym.py`: use HNO (tanh as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/closedloop_traj_generation_pno_tanh.py`: use PNO (tanh as activation function) as closed-loop controllers to generate data for saftety performance.
