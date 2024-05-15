@@ -60,7 +60,7 @@ The code is organized as follows:
 * `./validation_scripts/closedloop_traj_generation_pno_sine.py`: use PNO (sine as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/closedloop_traj_generation_pno_sine_sym.py`: use PNO (sine as activation function) as closed-loop controllers to generate data for saftety performance.
 * `./validation_scripts/trajectory_with_value_nop.py`: visualize saftety performance for value network (tanh, relu and sin as activation function).
-* `./validation_scripts/data_interpolation_nop.py`: create finner state interval for the generated trajectories using neurla operator. Compute more accurate collisin rates.
+* `./validation_scripts/data_interpolation_nop.py`: create finner state interval for the generated trajectories using neurla operator. Compute more accurate collision rates.
 * `./validation_scripts/model`: experimental model in the paper.
 * `./validation_scripts/train_data`: training data in the paper.
 * `./validation_scripts/test_data`: testing data in the paper.
