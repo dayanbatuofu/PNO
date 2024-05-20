@@ -45,7 +45,7 @@ p.add_argument('--epochs_til_ckpt', type=int, default=100,
                help='Time interval in seconds until checkpoint is saved.')
 p.add_argument('--steps_til_summary', type=int, default=100,
                help='Time interval in seconds until tensorboard summary is saved.')
-p.add_argument('--model', type=str, default='sine', required=False, choices=['tanh', 'relu', 'sine', 'gelu'],
+p.add_argument('--model', type=str, default='tanh', required=False, choices=['tanh', 'relu', 'sine', 'gelu'],
                help='Type of model to evaluate, default is sine.')
 p.add_argument('--mode', type=str, default='mlp', required=False, choices=['mlp', 'rbf', 'pinn'],
                help='Whether to use uniform velocity parameter')
