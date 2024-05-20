@@ -30,10 +30,7 @@ p.add_argument('--lr', type=float, default=2e-5, help='learning rate. default=2e
 
 """
 training epoch --num_epochs:
-200000 for hybrid 
-100000 for supervised 
-270000 for self-supervised
-5400 for value hardening
+50300 for PNO 
 """
 p.add_argument('--num_epochs', type=int, default=50300,
                help='Number of epochs to train for.')
@@ -58,20 +55,14 @@ p.add_argument('--branch_num_nl', type=int, default=64, required=False, help='Nu
 
 """
 training epoch ---pretrain_iters: 
-100000 for hybrid 
-100000 for supervised 
-10000 for self-supervised
-1000 for value hardening
+50000 for PNO 
 """
 p.add_argument('--pretrain_iters', type=int, default=50000, required=False, help='Number of pretrain iterations')
 p.add_argument('--counter_start', type=int, default=-1, required=False, help='Defines the initial time for the curriculul training')
 
 """
 training epoch --counter_end:
-100000 for hybrid 
-0 for supervised 
-260000 for self-supervised
-4400 for value hardening
+300 for PNO 
 """
 p.add_argument('--counter_end', type=int, default=300, required=False, help='Defines the linear step for curriculum training starting from the initial time')
 p.add_argument('--num_src_samples', type=int, default=1000, required=False, help='Number of source samples at each time step')  # 10000

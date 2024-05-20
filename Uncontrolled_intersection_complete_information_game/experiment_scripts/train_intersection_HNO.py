@@ -51,14 +51,14 @@ p.add_argument('--num_nl', type=int, default=64, required=False, help='Number of
 
 """
 training epoch ---pretrain_iters: 
-100000 for hybrid 
+100000 for HNO 
 """
 p.add_argument('--pretrain_iters', type=int, default=100000, required=False, help='Number of pretrain iterations')
 p.add_argument('--counter_start', type=int, default=-1, required=False, help='Defines the initial time for the curriculul training')
 
 """
 training epoch --counter_end:
-200000 for hybrid 
+200000 for HNO
 """
 p.add_argument('--counter_end', type=int, default=200000, required=False, help='Defines the linear step for curriculum training starting from the initial time')
 p.add_argument('--num_src_samples', type=int, default=1000, required=False, help='Number of source samples at each time step')
